@@ -6,4 +6,14 @@
 //  Copyright © 2015年 章宇. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ExperienceViewController: MainViewController {
+    var experModel: ExperienceViewController? {
+    
+        didSet {
+        
+//            headView?.experModel = experModel
+        }
+    }
+}

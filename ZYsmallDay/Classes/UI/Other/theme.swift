@@ -9,7 +9,7 @@
 import UIKit
 
 public let NavigationH: CGFloat = 64
-public let APPWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
+public let AppWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
 public let AppHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 public let MainBounds: CGRect = UIScreen.mainScreen().bounds
 

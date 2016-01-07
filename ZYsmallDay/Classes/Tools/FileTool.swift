@@ -27,7 +27,7 @@ class FileTool: NSObject {
     //彻底清除文件夹，异步
       class func cleanFolder(path: String, complete:() -> ()) {
 
-      /*  SVProgressHUD.showWithStatus("正在清理缓存", maskType: SVProgressHUDMaskType.Clear)
+       SVProgressHUD.showWithStatus("正在清理缓存", maskType: SVProgressHUDMaskType.Clear)
         let queue = dispatch_queue_create("cleanQueue", nil)
         
         dispatch_async(queue) { () -> Void in
@@ -43,7 +43,7 @@ class FileTool: NSObject {
                     }
                 }
             }
-        }*/
+        }
     }
 
 

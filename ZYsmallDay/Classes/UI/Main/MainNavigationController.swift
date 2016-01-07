@@ -29,7 +29,7 @@ class MainNavigationController: UINavigationController {
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
         backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0)
         backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
-        let btnW: CGFloat = APPWidth > 375.0 ? 50 : 44
+        let btnW: CGFloat = AppWidth > 375.0 ? 50 : 44
         backBtn.frame = CGRectMake(0, 0, btnW, 40)
         return backBtn
     }()

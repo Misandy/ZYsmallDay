@@ -16,20 +16,20 @@ class DoubleTextView: UIView {
     private let textFont: UIFont = theme.SDNavTitleFont
     private let bottomLineView: UIView = UIView()
     private var selectedBtn: UIButton?
-//    weak var delegate: DoubleTextViewDelegate?
+    weak var delegate: DoubleTextViewDelegate?
     
     //便利构造方法
     convenience init(leftText: String, rightText: String) {
         
         self.init()
-//        //设置左边文字
-//        setButton(leftTextButton, title: leftText, tag: 100)
-//        //设置右边文字
-//        setButton(rightTextButton, title: rightText, tag: 101)
-//        // 设置底部线条View
-//        setBottomLineView()
-//        
-//        titleButtonClick(leftTextButton)
+        //设置左边文字
+        setButton(leftTextButton, title: leftText, tag: 100)
+        //设置右边文字
+        setButton(rightTextButton, title: rightText, tag: 101)
+        // 设置底部线条View
+        setBottomLineView()
+        
+        titleButtonClick(leftTextButton)
     }
     
     private func setBottomLineView() {
@@ -52,10 +52,10 @@ class DoubleTextView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-//        let btnW = width * 0.5
-//        leftTextButton.frame = CGRectMake(0, 0, btnW, height)
-//        rightTextButton.frame = CGRectMake(btnW, 0, btnW, height)
-//        bottomLineView.frame = CGRectMake(0, height - 2, btnW, 2)
+        let btnW = width * 0.5
+        leftTextButton.frame = CGRectMake(0, 0, btnW, height)
+        rightTextButton.frame = CGRectMake(btnW, 0, btnW, height)
+        bottomLineView.frame = CGRectMake(0, height - 2, btnW, 2)
     }
     
     func titleButtonClick(sender: UIButton) {
@@ -72,23 +72,21 @@ class DoubleTextView: UIView {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             self.bottomLineView.frame.origin.x = CGFloat(index) * self.bottomLineView.width
         })
-        
-//        func clickBtnToIndex(index: Int) {
-//            let btn: NoHighlightButton = self.viewWithTag(index + 100) as! NoHighlightButton
-//            self.titleButtonClick(btn)
-//        }
-        
     }
+        func clickBtnToIndex(index: Int) {
+            let btn: NoHighlightButton = self.viewWithTag(index + 100) as! NoHighlightButton
+            self.titleButtonClick(btn)
+        }
 }
     
-    // DoubleTextViewDelegate协议
-//    protocol DoubleTextViewDelegate: NSObjectProtocol{
-//        
-//        func doubleTextView(doubleTextView: DoubleTextView, didClickBtn btn: UIButton, forIndex index: Int)
-//        
-//    }
-//    
-//    
+     //DoubleTextViewDelegate协议
+    protocol DoubleTextViewDelegate: NSObjectProtocol{
+        
+        func doubleTextView(doubleTextView: DoubleTextView, didClickBtn btn: UIButton, forIndex index: Int)
+        
+    }
+    
+
     // 没有高亮状态的按钮
     class NoHighlightButton: UIButton {
         

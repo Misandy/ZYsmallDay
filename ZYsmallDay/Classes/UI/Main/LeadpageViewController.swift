@@ -19,7 +19,7 @@ class LeadpageViewController: UIViewController {
         super.viewDidLoad()
         
         var imageName: String?
-        switch APPWidth {
+        switch AppWidth {
             
         case 375: imageName = NSBundle.mainBundle().pathForResource("fourpage-375w-667h@2x.jpg", ofType: nil)
         case 414: imageName = NSBundle.mainBundle().pathForResource("fourpage-414w-736h@3x.jpg", ofType: nil)
@@ -34,7 +34,7 @@ class LeadpageViewController: UIViewController {
         startBtn.setBackgroundImage(UIImage(named: "into_home"), forState: .Normal)
         startBtn.setTitle("开始小日子", forState: UIControlState.Normal)
         startBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        startBtn.frame = CGRect(x: (APPWidth - 210) * 0.5, y: AppHeight - 120, width: 210, height: 45)
+        startBtn.frame = CGRect(x: (AppWidth - 210) * 0.5, y: AppHeight - 120, width: 210, height: 45)
         startBtn.addTarget(self, action: "showMainTabbar", forControlEvents: .TouchUpInside)
         view.addSubview(startBtn)
     }

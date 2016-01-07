@@ -84,7 +84,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             let shareModel = ShareModel(shareTitle: "Swift开源项目:小日子", shareURL: theme.JianShuURL, image: UIImage(named: "author"), shareDetail: "小熊新作,Swift开源项目小日子,OC程序员学习Swift良心作品")
             share.shareModel = shareModel
             view.addSubview(share)
-            share.showShareView(CGRectMake(0, AppHeight - theme.ShareViewHeight - NavigationH, APPWidth, theme.ShareViewHeight))
+            share.showShareView(CGRectMake(0, AppHeight - theme.ShareViewHeight - NavigationH, AppWidth, theme.ShareViewHeight))
             
         } else if indexPath.row == SettingCellType.Clean.hashValue {
             weak var tmpSelf = self

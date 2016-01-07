@@ -24,7 +24,7 @@ class ShareView: UIView {
     
     class func shareViewFromXib() -> ShareView {
         let shareV = NSBundle.mainBundle().loadNibNamed("ShareView", owner: nil, options: nil).last as! ShareView
-        shareV.frame = CGRectMake(0, AppHeight, APPWidth, theme.ShareViewHeight)
+        shareV.frame = CGRectMake(0, AppHeight, AppWidth, theme.ShareViewHeight)
         return shareV
     }
 

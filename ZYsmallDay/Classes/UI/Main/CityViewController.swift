@@ -63,7 +63,7 @@ class CityViewController: UIViewController {
     
     func setCollectionView() {
         // 设置布局
-        let itemW = APPWidth / 3.0 - 1.0
+        let itemW = AppWidth / 3.0 - 1.0
         let itemH: CGFloat = 50
         layout.itemSize = CGSizeMake(itemW, itemH)
         layout.minimumLineSpacing = 1

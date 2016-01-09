@@ -57,14 +57,12 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     
     private func setNav() {
     
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "附近", titleColor: UIColor.blackColor(), target: self, action: "nearClick")
-        
-        
-        
-        doubleTextView = DoubleTextView(leftText:"美天", rightText:"美辑")
-        doubleTextView.frame = CGRectMake(0, 0, 120, 44)
-        doubleTextView.delegate = self
-        navigationItem.titleView = doubleTextView
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(t
+//        
+//        doubleTextView = DoubleTextView(leftText:"美天", rightText:"美辑")
+//        doubleTextView.frame = CGRectMake(0, 0, 120, 44)
+//        doubleTextView.delegate = self
+//        navigationItem.titleView = doubleTextView
     }
     
     private func setdayTableView() {
@@ -121,7 +119,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
                     tmpSelf!.albumTableView.mj_header.endRefreshing()
                     return
                 }
-//                tmpSelf!.themes = data!
+                tmpSelf!.themes = data
                 tmpSelf!.albumTableView.reloadData()
                 tmpSelf!.albumTableView.mj_header.endRefreshing()
             }
@@ -137,7 +135,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     
     // DoubleTextViewDelegate
     func doubleTextView(doubleTextView: DoubleTextView, didClickBtn btn: UIButton, forIndex index: Int) {
-//        backgroundScrollView.setContentOffset(CGPointmAKE(APPWidth * CGFloat(INDEX), 0), animated: true)
+        backgroundScrollView.setContentOffset(CGPointMake(AppWidth * CGFloat(index), 0), animated: true)
     }
 }
 
@@ -193,18 +191,53 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell?
+        var cell: UITableViewCell?
         
-        if tableView === albumTableView {
-        
-           cell = UITableViewCell.init();
-            // 美辑tableview
-//            let theme = self.themes!.list![indexPath.row]
-//            cell = ThemeCell.themeCell
+        if tableView === albumTableView { // 美辑TableView
             
-                    return cell!
-         
+            let theme = self.themes!.list![indexPath.row]
+            cell = ThemeCell.themeCellWithTableView(tableView)
+            (cell as! ThemeCell).model = theme
+            
+        }   else { // 美天TableView
+            let event = self.everyDays!.list![indexPath.section]
+            
+            if indexPath.row == 1 {
+                cell = ThemeCell.themeCellWithTableView(tableView)
+                (cell as! ThemeCell).model = event.themes?.last
+            } else {
+                cell = EventCellTableViewCell.eventCell(tableView)
+                (cell as! EventCellTableViewCell).eventModel = event
+            }
         }
-        return UITableViewCell.init();
+        
+        return cell!
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // 点击的themeCell,美辑cell
+        if tableView === albumTableView {
+            let theme = self.themes!.list![indexPath.row]
+            let themeVC = ThemeViewController()
+            themeVC.themeModel = theme
+            navigationController?.pushViewController(themeVC, animated: true)
+            
+        } else { // 点击的美天TableView里的美辑cell
+            
+            let event = self.everyDays!.list![indexPath.section]
+            if indexPath.row == 1 {
+                let themeVC = ThemeViewController()
+                themeVC.themeModel = event.themes?.last
+                navigationController!.pushViewController(themeVC, animated: true)
+                
+            } else { // 点击的美天的cell
+                let eventVC = EventViewController()
+                let event = self.everyDays!.list![indexPath.section]
+                eventVC.model = event.events![indexPath.row]
+                navigationController!.pushViewController(eventVC, animated: true)
+            }
+        }
+    }
+
 }

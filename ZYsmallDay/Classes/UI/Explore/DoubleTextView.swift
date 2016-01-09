@@ -4,12 +4,12 @@
 //
 //  Created by 章宇 on 15/12/13.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+// 探店的titleview
 
 import UIKit
 
 class DoubleTextView: UIView {
-//    
+
     private let leftTextButton: NoHighlightButton = NoHighlightButton()
     private let rightTextButton: NoHighlightButton = NoHighlightButton()
     private let textColorFroNormal: UIColor = UIColor(red: 100 / 255.0, green: 100 / 255.0, blue: 100 / 255.0, alpha: 1)

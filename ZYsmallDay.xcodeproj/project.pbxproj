@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26BD72EE72453A7CE071A2AD /* libPods-ZYsmallDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6955C61E405F682791233F /* libPods-ZYsmallDay.a */; };
+		950315951C412F10009165F5 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950315931C412F10009165F5 /* DetailCell.swift */; };
+		950315961C412F10009165F5 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950315941C412F10009165F5 /* DetailCell.xib */; };
 		950C15EA1C1BCFB4000929F5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15E61C1BCFB4000929F5 /* MainTabBarController.swift */; };
 		950C15EC1C1BD286000929F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15EB1C1BD286000929F5 /* MainViewController.swift */; };
 		950C15EE1C1BD351000929F5 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15ED1C1BD351000929F5 /* CityViewController.swift */; };
@@ -119,11 +121,16 @@
 		959AB4421C1D61C30053111F /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB4411C1D61C30053111F /* DoubleTextView.swift */; };
 		959BDED11C3402F600DF668A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 959BDED01C3402F600DF668A /* libsqlite3.tbd */; };
 		95D456451C1AFB0B00A732F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D456441C1AFB0B00A732F5 /* AppDelegate.swift */; };
+		95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */; };
+		95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */; };
+		95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		190F4656CB284F502E033B12 /* Pods-ZYsmallDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYsmallDay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYsmallDay/Pods-ZYsmallDay.release.xcconfig"; sourceTree = "<group>"; };
 		6C6955C61E405F682791233F /* libPods-ZYsmallDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYsmallDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		950315931C412F10009165F5 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		950315941C412F10009165F5 /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
 		950C15E61C1BCFB4000929F5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		950C15EB1C1BD286000929F5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		950C15ED1C1BD351000929F5 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +279,9 @@
 		95D456411C1AFB0B00A732F5 /* ZYsmallDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYsmallDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D456441C1AFB0B00A732F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D456501C1AFB0B00A732F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
+		95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+wnxImage.swift"; sourceTree = "<group>"; };
+		95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+wxnBarButtonItem.swift"; sourceTree = "<group>"; };
 		A5C8BDA8DAFAC8653395D515 /* Pods-ZYsmallDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYsmallDay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYsmallDay/Pods-ZYsmallDay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -394,6 +404,9 @@
 			isa = PBXGroup;
 			children = (
 				952ACF101C1C9D5000C9CA11 /* ClassifyViewController.swift */,
+				95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */,
+				950315931C412F10009165F5 /* DetailCell.swift */,
+				950315941C412F10009165F5 /* DetailCell.xib */,
 			);
 			path = Classify;
 			sourceTree = "<group>";
@@ -436,9 +449,11 @@
 			isa = PBXGroup;
 			children = (
 				95430A7A1C1BE34B00CCFDC8 /* UIColor+wnxColor.swift */,
+				95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */,
 				9514EDD51C33D1FE00FD7798 /* RegExCategories.h */,
 				952ACF0C1C1C806E00C9CA11 /* UIView+wnxView.swift */,
 				956664D11C20134E0083F9B3 /* UIImage+wnxImage.swift */,
+				95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -747,6 +762,7 @@
 				956665001C21736D0083F9B3 /* ShareView.xib in Resources */,
 				952ACEF81C1C5BF400C9CA11 /* 798 in Resources */,
 				952ACEF91C1C5BF400C9CA11 /* 南锣鼓巷 in Resources */,
+				950315961C412F10009165F5 /* DetailCell.xib in Resources */,
 				9514EDCD1C33D11B00FD7798 /* UMShareEditViewControlleriPad.xib in Resources */,
 				952ACF051C1C5F9D00C9CA11 /* LaunchScreen.xib in Resources */,
 				9514EDCB1C33D11B00FD7798 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -826,6 +842,7 @@
 				9514EDBE1C33D11B00FD7798 /* SDWebImageManager.m in Sources */,
 				956664FC1C2172030083F9B3 /* FileTool.swift in Sources */,
 				952ACF0D1C1C806E00C9CA11 /* UIView+wnxView.swift in Sources */,
+				95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */,
 				952ACEE51C1C593400C9CA11 /* LeadpageViewController.swift in Sources */,
 				9514EDBB1C33D11B00FD7798 /* SDWebImageDecoder.m in Sources */,
 				951373DC1C3C0920007610CE /* NearViewController.swift in Sources */,
@@ -834,11 +851,14 @@
 				956664CE1C1D7E1C0083F9B3 /* CityHeadCollectionReusableView.swift in Sources */,
 				951373F81C3C0B09007610CE /* MoreView.swift in Sources */,
 				952ACF0F1C1C98E600C9CA11 /* ExperienceViewController.swift in Sources */,
+				95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */,
 				951374021C3C19C2007610CE /* SDRefreshHeader.swift in Sources */,
 				9514EDC31C33D11B00FD7798 /* UIImage+WebP.m in Sources */,
 				951373F41C3C0AC9007610CE /* ShopDetailContentView.swift in Sources */,
 				95430A7B1C1BE34B00CCFDC8 /* UIColor+wnxColor.swift in Sources */,
 				951373EB1C3C0A1E007610CE /* ThemeCell.swift in Sources */,
+				95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */,
+				950315951C412F10009165F5 /* DetailCell.swift in Sources */,
 				9514EDBD1C33D11B00FD7798 /* SDWebImageDownloaderOperation.m in Sources */,
 				956665021C219ECC0083F9B3 /* ShareModel.swift in Sources */,
 				9514EDB71C33D11B00FD7798 /* MKAnnotationView+WebCache.m in Sources */,

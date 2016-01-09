@@ -9,16 +9,45 @@
 import UIKit
 
 class EventCellTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    var eventModel: EveryDay? {
+    
+        didSet {
+            cellTitleLabel.text = eventModel!.events?.last?.feeltitle
+            titleLabel.text = eventModel!.events?.last?.title
+            subTltleLabel.text = eventModel!.events?.last?.address
+            dayLable.text = eventModel?.day
+            monthLabel.text = eventModel?.month
+            
+            if let imageURL = NSURL(string: eventModel!.events!.last!.imgs!.last!) {
+                imageImageView.wxn_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng")!)
+            }
+        }
     }
     
+    
+    @IBOutlet weak var cellTitleLabel: UILabel!
+    @IBOutlet weak var dayLable: UILabel!
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTltleLabel: UILabel!
+    @IBOutlet weak var imageImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .None
+    }
+    
+    
+    class func eventCell(tableView: UITableView) -> EventCellTableViewCell {
+        let identifier = "eventCell"
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(identifier) as? EventCellTableViewCell
+        if cell == nil {
+        
+            cell = NSBundle.mainBundle().loadNibNamed("EventCellTableViewCell", owner: nil, options: nil).last as? EventCellTableViewCell
+        }
+        
+        return cell!
+    }
 }

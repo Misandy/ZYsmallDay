@@ -10,6 +10,7 @@
 		26BD72EE72453A7CE071A2AD /* libPods-ZYsmallDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6955C61E405F682791233F /* libPods-ZYsmallDay.a */; };
 		950315951C412F10009165F5 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950315931C412F10009165F5 /* DetailCell.swift */; };
 		950315961C412F10009165F5 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 950315941C412F10009165F5 /* DetailCell.xib */; };
+		9507A3321C43984A00E760AF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507A3311C43984A00E760AF /* DetailViewController.swift */; };
 		950C15EA1C1BCFB4000929F5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15E61C1BCFB4000929F5 /* MainTabBarController.swift */; };
 		950C15EC1C1BD286000929F5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15EB1C1BD286000929F5 /* MainViewController.swift */; };
 		950C15EE1C1BD351000929F5 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C15ED1C1BD351000929F5 /* CityViewController.swift */; };
@@ -121,6 +122,7 @@
 		959AB4421C1D61C30053111F /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB4411C1D61C30053111F /* DoubleTextView.swift */; };
 		959BDED11C3402F600DF668A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 959BDED01C3402F600DF668A /* libsqlite3.tbd */; };
 		95D456451C1AFB0B00A732F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D456441C1AFB0B00A732F5 /* AppDelegate.swift */; };
+		95D51B0F1C42373800AB56D6 /* LoadAnimatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */; };
 		95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */; };
 		95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */; };
 		95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */; };
@@ -131,6 +133,7 @@
 		6C6955C61E405F682791233F /* libPods-ZYsmallDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYsmallDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		950315931C412F10009165F5 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		950315941C412F10009165F5 /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		9507A3311C43984A00E760AF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		950C15E61C1BCFB4000929F5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		950C15EB1C1BD286000929F5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		950C15ED1C1BD351000929F5 /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +282,7 @@
 		95D456411C1AFB0B00A732F5 /* ZYsmallDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYsmallDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D456441C1AFB0B00A732F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D456501C1AFB0B00A732F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimatImageView.swift; sourceTree = "<group>"; };
 		95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+wnxImage.swift"; sourceTree = "<group>"; };
 		95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+wxnBarButtonItem.swift"; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				952ACF0E1C1C98E600C9CA11 /* ExperienceViewController.swift */,
+				9507A3311C43984A00E760AF /* DetailViewController.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				951373FF1C3C0BE5007610CE /* MainTableView.swift */,
 				955ED5681C1C47B40054494E /* MainNavigationController.swift */,
 				952ACEE41C1C593400C9CA11 /* LeadpageViewController.swift */,
+				95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */,
 				950C15ED1C1BD351000929F5 /* CityViewController.swift */,
 				956664CB1C1D7D7F0083F9B3 /* CityCollectionViewCell.swift */,
 				956664CD1C1D7E1C0083F9B3 /* CityHeadCollectionReusableView.swift */,
@@ -832,6 +838,7 @@
 				956664E21C2023FA0083F9B3 /* SettingCell.swift in Sources */,
 				951373E51C3C09E2007610CE /* EventCellTableViewCell.swift in Sources */,
 				9514EDBA1C33D11B00FD7798 /* SDWebImageCompat.m in Sources */,
+				95D51B0F1C42373800AB56D6 /* LoadAnimatImageView.swift in Sources */,
 				956664F41C2163CD0083F9B3 /* EveryDayModel.swift in Sources */,
 				951373F01C3C0A69007610CE /* EventWebView.swift in Sources */,
 				956664E61C2024C70083F9B3 /* FeedbackViewController.swift in Sources */,
@@ -864,6 +871,7 @@
 				9514EDB71C33D11B00FD7798 /* MKAnnotationView+WebCache.m in Sources */,
 				950C15EA1C1BCFB4000929F5 /* MainTabBarController.swift in Sources */,
 				956664DD1C20233F0083F9B3 /* OrderViewController.swift in Sources */,
+				9507A3321C43984A00E760AF /* DetailViewController.swift in Sources */,
 				951373F21C3C0A98007610CE /* ThemeViewController.swift in Sources */,
 				9514EDC41C33D11B00FD7798 /* UIImageView+HighlightedWebCache.m in Sources */,
 				95430A791C1BDCA000CCFDC8 /* theme.swift in Sources */,

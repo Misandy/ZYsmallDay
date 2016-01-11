@@ -35,10 +35,68 @@ class NearViewController: UIViewController {
 //    private lazy var mapView: WNXMapView = WNXMapView(frame: self.view.bounds)
     
 //    private var rightItem: UIBarButtonItem = {
-//        
+    
 //        let right = UIBarButtonItem(imageName: "map_2-1", highlImageName: "map_2", selectedImage: "list_1", targer: self, action: "leftItemClick:")
 //        return right
 //    }()
+    
+    // 方法
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(backView)
+        
+        title = "附近"
+        view.backgroundColor = theme.SDBackgroundColor
+        backView.addSubview(nearTableView)
+        
+        // 加载附近是否有店铺，这类定位到了我的附近，在深圳，模拟一直有附近，数据是本地的，所以获取的是固定的
+        nearTableView.mj_header.beginRefreshing()
+        nearTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
+    }
+    
+    func pullLoadDatas() {
+    
+        weak var tmpSelf = self
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            DetailModel.loadNearDatas({ (data, error) -> () in
+                if error != nil {
+                
+                    SVProgressHUD.showErrorWithStatus("网速不给力")
+                    tmpSelf?.nearTableView.mj_header.endRefreshing()
+                    return
+                }
+            
+                tmpSelf!.nears = data
+                tmpSelf!.nearTableView.reloadData()
+                tmpSelf!.nearTableView.mj_header.endRefreshing()
+//                tmpSelf!.mapView.nearsModel = data
+//                tmpSelf!.addMapView()
+            })
+        }
+    }
+    
+    private func addMapView() {
+//    mapView.pushVC = self
+//        backView.insertSubview(mapView, aboveSubview: nearTableView)
+    }
+    
+    func leftItemClik(sender: UIButton) {
+    sender.selected = !sender.selected
+        
+//        if sender.selected {
+//        UIView.transitionFromView(nearTableView, toView: mapView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+//        } else {
+//        UIView.transitionFromView(mapView, toView: nearTableView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+//        }
+    }
+    
+    deinit {
+//        mapView.clearDisk()
+//        mapView.showsUserLocation = false
+//        print("地图控制器被销毁", terminator: "")
+    }
 }
 
 

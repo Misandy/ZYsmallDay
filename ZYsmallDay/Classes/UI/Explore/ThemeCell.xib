@@ -14,10 +14,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="240.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-ga-Gqc" userLabel="Back Image View">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-ga-Gqc" userLabel="Back Image View">
                         <rect key="frame" x="0.0" y="5" width="320" height="235"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moreshadow" translatesAutoresizingMaskIntoConstraints="NO" id="PIW-wg-YLW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreshadow" translatesAutoresizingMaskIntoConstraints="NO" id="PIW-wg-YLW">
                         <rect key="frame" x="0.0" y="5" width="320" height="235"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="不出城的暑假去这里 (杭州篇)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iF-aK-3gv">
@@ -33,6 +33,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1Gu-sp-YHw"/>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1ss-5j-bha"/>
+                    <constraint firstAttribute="trailing" secondItem="Xe6-ga-Gqc" secondAttribute="trailing" id="8j0-fg-r1U"/>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="bottom" secondItem="PIW-wg-YLW" secondAttribute="bottom" id="DW0-RE-x0b"/>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="trailing" secondItem="PIW-wg-YLW" secondAttribute="trailing" id="NRf-Bf-ePV"/>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="top" secondItem="PIW-wg-YLW" secondAttribute="top" id="tHb-p8-gjK"/>
+                    <constraint firstItem="Xe6-ga-Gqc" firstAttribute="leading" secondItem="PIW-wg-YLW" secondAttribute="leading" id="tMA-QX-xyY"/>
+                    <constraint firstAttribute="bottom" secondItem="Xe6-ga-Gqc" secondAttribute="bottom" id="vPZ-Ea-Dnl"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="backImageView" destination="Xe6-ga-Gqc" id="9pF-bH-gaw"/>

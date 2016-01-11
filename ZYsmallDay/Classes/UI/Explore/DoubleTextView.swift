@@ -44,7 +44,7 @@ class DoubleTextView: UIView {
         button.setTitleColor(textColorFroNormal, forState: .Normal)
         button.titleLabel?.font = textFont
         button.tag = tag
-        button.addTarget(self, action: "titleButtonClick", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: "titleButtonClick:", forControlEvents: .TouchUpInside)
         button.setTitle(title, forState: .Normal)
         addSubview(button)
     }

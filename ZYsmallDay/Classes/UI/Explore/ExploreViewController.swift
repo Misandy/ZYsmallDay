@@ -37,7 +37,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
         //初始化美辑tableview
         setalbumTableView()
         
-//        // 下拉加载数据
+       // 下拉加载数据
         dayTableView.mj_header.beginRefreshing()
         albumTableView.mj_header.beginRefreshing()
     }
@@ -56,13 +56,12 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     }
     
     private func setNav() {
-    
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(t
-//        
-//        doubleTextView = DoubleTextView(leftText:"美天", rightText:"美辑")
-//        doubleTextView.frame = CGRectMake(0, 0, 120, 44)
-//        doubleTextView.delegate = self
-//        navigationItem.titleView = doubleTextView
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "附近", titleClocr: UIColor.blackColor(), targer: self, action: "nearClick")
+        
+        doubleTextView = DoubleTextView(leftText: "美天", rightText: "美辑");
+        doubleTextView.frame = CGRectMake(0, 0, 120, 44)
+        doubleTextView.delegate = self
+        navigationItem.titleView = doubleTextView
     }
     
     private func setdayTableView() {

@@ -4,18 +4,20 @@
 //
 //  Created by 章宇 on 16/1/5.
 //  Copyright © 2016年 章宇. All rights reserved.
-//
+//  美天详情webview
 
 import UIKit
 
 class EventWebView: UIWebView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    init(rect: CGRect, webViewDelegate: UIWebViewDelegate?, webViewScrollViewDelegate: UIScrollViewDelegate?) {
+        
+        super.init(frame: rect)
+        
+        
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

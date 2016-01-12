@@ -11,5 +11,4 @@
 #import <AMapSearchKit/AMapSearchAPI.h>
 #import <MJRefresh.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-#import <SVProgressHUD/SVProgressHUD.h>
 @import SVProgressHUD;

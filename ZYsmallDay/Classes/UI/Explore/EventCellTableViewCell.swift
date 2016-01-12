@@ -21,8 +21,8 @@ class EventCellTableViewCell: UITableViewCell {
         
             
             if let imageURL = NSURL(string: eventModel!.events!.last!.imgs!.last!) {
-//                imageImageView.wxn_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng")!)
-                imageImageView.sd_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng"))
+                imageImageView.wxn_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng")!)
+//                imageImageView.sd_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng"))
             }
         }
     }

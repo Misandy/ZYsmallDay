@@ -7,7 +7,9 @@
 #import "UMSocialSinaHandler.h"
 #import "UMSocialWechatHandler.h"
 #import "RegExCategories.h"
-#import "UIImageView+WebCache.h"
-#import <SVProgressHUD/SVProgressHUD.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchAPI.h>
 #import <MJRefresh.h>
-//#import <MAMapKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+@import SVProgressHUD;

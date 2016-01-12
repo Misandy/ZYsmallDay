@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 16/1/5.
 //  Copyright © 2016年 章宇. All rights reserved.
-//
+//  探店美天的自定义cell
 
 import UIKit
 
@@ -18,9 +18,11 @@ class EventCellTableViewCell: UITableViewCell {
             subTltleLabel.text = eventModel!.events?.last?.address
             dayLable.text = eventModel?.day
             monthLabel.text = eventModel?.month
+        
             
             if let imageURL = NSURL(string: eventModel!.events!.last!.imgs!.last!) {
-                imageImageView.wxn_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng")!)
+//                imageImageView.wxn_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng")!)
+                imageImageView.sd_setImageWithURL(imageURL, placeholderImage: UIImage(named: "quesheng"))
             }
         }
     }

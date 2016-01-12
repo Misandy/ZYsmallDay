@@ -36,3 +36,24 @@ class EventViewController: UIViewController {
         }
     }
 }
+
+//   UIWebViewDelegate
+extension EventViewController: UIWebViewDelegate {
+
+    func webViewDidFinishLoad(webView: UIWebView) {
+        webView.stringByEvaluatingJavaScriptFromString("document.getElementsByTagName('body')[0].style.background='#F5F5F5';")
+        isLoadFinish = true
+        guessLikeView.frame = CGRect(x: 0, y: webView.scrollView.contentSize.height, width: AppWidth, height: 50)
+        guessLikeView.hidden = false
+        webView.scrollView.contentSize.height += 50
+        for more in moreArr {
+        
+            more.frame = CGRect(x: 0, y: webView.scrollView.contentSize.height, width: AppWidth, height: 230)
+            more.hidden = false
+            webView.scrollView.contentSize.height += 235
+            isAddButtomView = true
+        }
+        loadFinishScrollHeight = webView.scrollView.contentSize.height
+    }
+}
+

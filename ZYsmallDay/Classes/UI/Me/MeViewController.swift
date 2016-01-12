@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 public let SD_UserIconData_Path = theme.cachesPath + "/iconImage.data"
 
 enum SDMineCellType: Int {

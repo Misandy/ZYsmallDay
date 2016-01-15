@@ -109,6 +109,7 @@
 		95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */; };
 		95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */; };
 		95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */; };
+		95F6E33D1C4500CD0062DB4F /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */; };
 		DF111BC6C15D52475989F39B /* Pods_ZYsmallDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1BA8CEFAD216CD180E0FD0 /* Pods_ZYsmallDay.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +238,7 @@
 		95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+wnxImage.swift"; sourceTree = "<group>"; };
 		95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+wxnBarButtonItem.swift"; sourceTree = "<group>"; };
+		95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
 		DA1BA8CEFAD216CD180E0FD0 /* Pods_ZYsmallDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYsmallDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -421,6 +423,7 @@
 				951374011C3C19C2007610CE /* SDRefreshHeader.swift */,
 				956664FD1C2172DC0083F9B3 /* ShareView.swift */,
 				956664FF1C21736D0083F9B3 /* ShareView.xib */,
+				95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				955ED5691C1C47B40054494E /* MainNavigationController.swift in Sources */,
 				956664D81C2020AF0083F9B3 /* UserAccountTool.swift in Sources */,
 				95D456451C1AFB0B00A732F5 /* AppDelegate.swift in Sources */,
+				95F6E33D1C4500CD0062DB4F /* ShopDetailView.swift in Sources */,
 				956664E01C2023B30083F9B3 /* SettingViewController.swift in Sources */,
 				951373DA1C3C0312007610CE /* String+Hash.swift in Sources */,
 				951374001C3C0BE5007610CE /* MainTableView.swift in Sources */,

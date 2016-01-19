@@ -9,13 +9,25 @@
 import UIKit
 
 class MoreView: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    @IBOutlet weak var imageImageView: UIImageView!
+    @IBOutlet weak var adressLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    var model: GuessLikeModel? {
+        didSet {
+            titleLabel.text = model?.title
+            adressLabel.text = model?.address
+            if let imgStr = model?.imgs?.last {
+                imageImageView.wxn_setImageWithURL(NSURL(string: imgStr)!, placeholderImage: UIImage(named: "quesheng")!)
+            }
+        }
     }
-    */
 
+    class func moreViewWithGuessLikeModel(model: GuessLikeModel) -> MoreView{
+        let moreView = NSBundle.mainBundle().loadNibNamed("MoreView", owner: nil, options: nil).last as! MoreView
+        moreView.model = model
+        return moreView
+    }
 }

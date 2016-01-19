@@ -32,13 +32,12 @@ class NearViewController: UIViewController {
         return tableV
     }()
     
-//    private lazy var mapView: WNXMapView = WNXMapView(frame: self.view.bounds)
+    private lazy var mapView: WNXMapView = WNXMapView(frame: self.view.bounds)
     
-//    private var rightItem: UIBarButtonItem = {
-    
-//        let right = UIBarButtonItem(imageName: "map_2-1", highlImageName: "map_2", selectedImage: "list_1", targer: self, action: "leftItemClick:")
-//        return right
-//    }()
+    private lazy var rightItem: UIBarButtonItem = {
+        let right = UIBarButtonItem(imageName: "map_2-1", highlImageName: "map_2", SelectedImage: "list_1", targer: self, action: "leftItemClick:")
+        return right
+    }()
     
     // 方法
     override func viewDidLoad() {
@@ -71,31 +70,31 @@ class NearViewController: UIViewController {
                 tmpSelf!.nears = data
                 tmpSelf!.nearTableView.reloadData()
                 tmpSelf!.nearTableView.mj_header.endRefreshing()
-//                tmpSelf!.mapView.nearsModel = data
-//                tmpSelf!.addMapView()
+                tmpSelf!.mapView.nearsModel = data
+                tmpSelf!.addMapView()
             })
         }
     }
     
     private func addMapView() {
-//    mapView.pushVC = self
-//        backView.insertSubview(mapView, aboveSubview: nearTableView)
+    mapView.pushVC = self
+        backView.insertSubview(mapView, aboveSubview: nearTableView)
     }
     
     func leftItemClik(sender: UIButton) {
     sender.selected = !sender.selected
         
-//        if sender.selected {
-//        UIView.transitionFromView(nearTableView, toView: mapView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
-//        } else {
-//        UIView.transitionFromView(mapView, toView: nearTableView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
-//        }
+        if sender.selected {
+        UIView.transitionFromView(nearTableView, toView: mapView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromLeft, completion: nil)
+        } else {
+        UIView.transitionFromView(mapView, toView: nearTableView, duration: 1.0, options: UIViewAnimationOptions.TransitionFlipFromRight, completion: nil)
+        }
     }
     
     deinit {
-//        mapView.clearDisk()
-//        mapView.showsUserLocation = false
-//        print("地图控制器被销毁", terminator: "")
+        mapView.clearDisk()
+        mapView.showsUserLocation = false
+        print("地图控制器被销毁", terminator: "")
     }
 }
 
@@ -106,7 +105,7 @@ class NearViewController: UIViewController {
         
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             if nears?.list?.count > 0 {
-//                navigationItem.rightBarButtonItem = rightItem
+                navigationItem.rightBarButtonItem = rightItem
             } else {
                 navigationItem.rightBarButtonItem = nil
             }

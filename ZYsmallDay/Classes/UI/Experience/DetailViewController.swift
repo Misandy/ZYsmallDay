@@ -16,5 +16,10 @@ public let DetailViewController_TopImageView_Height: CGFloat = 225
 
 class DetailViewController: UIViewController {
 
-    
+    //  model 重新didset方法
+    var model: EventModel? {
+        didSet {
+        
+        }
+    }
 }

@@ -7,10 +7,61 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoreView" customModule="ZYsmallDay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moredi" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-ym-rCH">
+                    <rect key="frame" x="5" y="0.0" width="365" height="225"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="55g-ZK-gBj"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="koR-qf-QP1">
+                    <rect key="frame" x="5" y="0.0" width="365" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="GCh-id-PEy"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="的撒大大是大大是大的萨达萨达" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-bQ-qtP">
+                    <rect key="frame" x="10" y="160" width="345" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukK-tW-Ni1">
+                    <rect key="frame" x="10" y="200" width="355" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="koR-qf-QP1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6oR-kX-x9j"/>
+                <constraint firstItem="kKh-bQ-qtP" firstAttribute="top" secondItem="koR-qf-QP1" secondAttribute="bottom" constant="-30" id="7lv-lz-a7t"/>
+                <constraint firstAttribute="trailing" secondItem="kKh-bQ-qtP" secondAttribute="trailing" constant="20" id="8NE-dN-YA9"/>
+                <constraint firstItem="kKh-bQ-qtP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="CEO-L9-Dyy"/>
+                <constraint firstAttribute="trailing" secondItem="koR-qf-QP1" secondAttribute="trailing" constant="5" id="Fx4-BC-LXd"/>
+                <constraint firstAttribute="bottom" secondItem="ukK-tW-Ni1" secondAttribute="bottom" constant="12" id="Hbs-r8-bCF"/>
+                <constraint firstItem="RL1-ym-rCH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="I9a-VT-lmy"/>
+                <constraint firstItem="ukK-tW-Ni1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="chB-JQ-McU"/>
+                <constraint firstItem="koR-qf-QP1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="etl-jf-Ffx"/>
+                <constraint firstAttribute="trailing" secondItem="ukK-tW-Ni1" secondAttribute="trailing" constant="10" id="j06-jt-Kl8"/>
+                <constraint firstAttribute="trailing" secondItem="RL1-ym-rCH" secondAttribute="trailing" constant="5" id="sYC-ak-PCC"/>
+                <constraint firstItem="RL1-ym-rCH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x1w-CS-jNW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adressLabel" destination="kKh-bQ-qtP" id="1XI-ez-oSy"/>
+                <outlet property="imageImageView" destination="koR-qf-QP1" id="8O5-Xy-rVx"/>
+                <outlet property="titleLabel" destination="ukK-tW-Ni1" id="nc4-Jn-jWA"/>
+            </connections>
+            <point key="canvasLocation" x="321" y="348"/>
         </view>
     </objects>
+    <resources>
+        <image name="moredi" width="2" height="66"/>
+    </resources>
 </document>

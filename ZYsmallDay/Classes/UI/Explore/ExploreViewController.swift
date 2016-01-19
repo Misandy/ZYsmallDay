@@ -37,13 +37,13 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
         //初始化美辑tableview
         setalbumTableView()
         
-       // 下拉加载数据
+        // 下拉加载数据
         dayTableView.mj_header.beginRefreshing()
         albumTableView.mj_header.beginRefreshing()
     }
     
     private func setScrollView() {
-    
+        
         self.automaticallyAdjustsScrollViewInsets = false
         backgroundScrollView = UIScrollView(frame: CGRectMake(0, 0, AppWidth, AppHeight - NavigationH - 49))
         backgroundScrollView.backgroundColor = theme.SDBackgroundColor
@@ -65,7 +65,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     }
     
     private func setdayTableView() {
-    
+        
         dayTableView = MainTableView(frame: CGRectMake(0, 0, AppWidth, AppHeight - NavigationH), style: .Grouped, dataSource: self, delegate: self)
         dayTableView.sectionHeaderHeight = 0.1
         dayTableView.sectionFooterHeight = 0.1
@@ -90,7 +90,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     
     // 下拉加载刷新数据
     func pullLoadDayData() {
-    
+        
         weak var tmpSelf = self
         // 模拟延时加载
         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.6 * Double(NSEC_PER_SEC)))
@@ -101,7 +101,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
                     tmpSelf!.dayTableView.mj_header.endRefreshing()
                     return
                 }
-            tmpSelf!.everyDays = data!
+                tmpSelf!.everyDays = data!
                 tmpSelf!.dayTableView.reloadData()
                 tmpSelf!.dayTableView.mj_header.endRefreshing()
             }
@@ -109,7 +109,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     }
     
     func pullLoadAlbumData() {
-    weak var tmpSelf = self
+        weak var tmpSelf = self
         let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
             ThemeModels.loadThemesData { (data, error) -> () in
@@ -128,7 +128,7 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
     
     // 附近action
     func nearClick() {
-    let nearVC = NearViewController()
+        let nearVC = NearViewController()
         navigationController?.pushViewController(nearVC, animated: true)
     }
     
@@ -140,11 +140,11 @@ class ExploreViewController: MainViewController, DoubleTextViewDelegate {
 
 // UIScrollViewDelegate
 extension ExploreViewController: UIScrollViewDelegate {
-
+    
     // UIScrollViewDelegate 监听scrollview的滚动事件
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         if scrollView === backgroundScrollView {
-        
+            
             let index = Int(scrollView.contentOffset.x / AppWidth)
             doubleTextView.clickBtnToIndex(index)
         }
@@ -153,16 +153,16 @@ extension ExploreViewController: UIScrollViewDelegate {
 
 //  UITableViewDelegate, UITableViewDataSource
 extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView === albumTableView {
-        
+            
             return themes?.list?.count ?? 0
         } else {
-        
+            
             let event = self.everyDays!.list![section]
             if let _ = event.themes?.last {
-            
+                
                 return 2
             }
             return 1
@@ -171,20 +171,20 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if tableView === albumTableView {
-        
+            
             return 240
         } else {
-        
+            
             return 253
         }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if tableView === albumTableView {
-        
+            
             return 1
         } else {
-        
+            
             return self.everyDays?.list?.count ?? 0
         }
     }
@@ -238,5 +238,5 @@ extension ExploreViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-
+    
 }

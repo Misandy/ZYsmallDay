@@ -32,7 +32,7 @@ class ThemeViewController: UIViewController, UIWebViewDelegate {
         addModalBtn()
     }
     
-    //MARK:- 懒加载属性
+    // MARK:- 懒加载属性
     private lazy var backView: UIView = {
         let backView = UIView(frame: MainBounds)
         backView.backgroundColor = theme.SDBackgroundColor
@@ -60,7 +60,7 @@ class ThemeViewController: UIViewController, UIWebViewDelegate {
     }()
     private var modalBtn: UIButton! = UIButton()
     
-    /// Function
+    // Function
     private func setUpUI() {
         view.backgroundColor = UIColor.whiteColor()
         view.addSubview(backView)
@@ -90,7 +90,7 @@ class ThemeViewController: UIViewController, UIWebViewDelegate {
         view.addSubview(modalBtn)
     }
     
-    ///MARK: - ButtonAction
+    // MARK: - ButtonAction
     func shareClick() {
         view.addSubview(shareView!)
         shareView!.showShareView(CGRectMake(0, AppHeight - 215 - 64, AppWidth, 215))
@@ -106,7 +106,7 @@ class ThemeViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
-    /// WebViewDelegate
+    // WebViewDelegate
     func webViewDidFinishLoad(webView: UIWebView) {
         self.webView!.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
     }

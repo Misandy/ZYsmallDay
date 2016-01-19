@@ -48,6 +48,10 @@
 		9514EDD21C33D11B00FD7798 /* libSocialSina.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9514EDAF1C33D11B00FD7798 /* libSocialSina.a */; };
 		9514EDD31C33D11C00FD7798 /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9514EDB21C33D11B00FD7798 /* libSocialWechat.a */; };
 		9514EDD41C33D11C00FD7798 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9514EDB31C33D11B00FD7798 /* libWeChatSDK.a */; };
+		951ADFA71C4B73CF005795BC /* NavigatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ADFA61C4B73CF005795BC /* NavigatorViewController.swift */; };
+		951ADFA91C4B798C005795BC /* String+wnxString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ADFA81C4B798C005795BC /* String+wnxString.swift */; };
+		951ADFAB1C4BE728005795BC /* ExperHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ADFAA1C4BE728005795BC /* ExperHeadView.swift */; };
+		951ADFAD1C4BE783005795BC /* ExperienceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951ADFAC1C4BE783005795BC /* ExperienceModel.swift */; };
 		95206FEB1C340BC90011544F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95206FEA1C340BC90011544F /* CoreLocation.framework */; };
 		952ACEE51C1C593400C9CA11 /* LeadpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952ACEE41C1C593400C9CA11 /* LeadpageViewController.swift */; };
 		952ACEEA1C1C5BC800C9CA11 /* fourpage-375w-667h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 952ACEE61C1C5BC800C9CA11 /* fourpage-375w-667h@2x.jpg */; };
@@ -106,9 +110,19 @@
 		959BDED11C3402F600DF668A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 959BDED01C3402F600DF668A /* libsqlite3.tbd */; };
 		95D456451C1AFB0B00A732F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D456441C1AFB0B00A732F5 /* AppDelegate.swift */; };
 		95D51B0F1C42373800AB56D6 /* LoadAnimatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */; };
+		95D6E2E31C4E68CB009978B5 /* RegExCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D6E2E21C4E68CB009978B5 /* RegExCategories.m */; };
 		95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */; };
 		95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */; };
 		95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */; };
+		95EC15751C4D1B56007DB8F5 /* ExperHeadPushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC15741C4D1B56007DB8F5 /* ExperHeadPushViewController.swift */; };
+		95EC15771C4D1B7A007DB8F5 /* ExperienceWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC15761C4D1B7A007DB8F5 /* ExperienceWebView.swift */; };
+		95EC157B1C4D1BBA007DB8F5 /* ExploreBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC157A1C4D1BBA007DB8F5 /* ExploreBottomView.swift */; };
+		95EC157D1C4D1BD3007DB8F5 /* ExploreBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC157C1C4D1BD3007DB8F5 /* ExploreBottomView.xib */; };
+		95EC15801C4D1C1F007DB8F5 /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC157E1C4D1C1F007DB8F5 /* ExperienceCell.swift */; };
+		95EC15811C4D1C1F007DB8F5 /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC157F1C4D1C1F007DB8F5 /* ExperienceCell.xib */; };
+		95EC15841C4D1C45007DB8F5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC15821C4D1C45007DB8F5 /* SignUpViewController.swift */; };
+		95EC15851C4D1C45007DB8F5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95EC15831C4D1C45007DB8F5 /* SignUpViewController.xib */; };
+		95EC15871C4D1C61007DB8F5 /* BuyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EC15861C4D1C61007DB8F5 /* BuyDetailViewController.swift */; };
 		95F6E33D1C4500CD0062DB4F /* ShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */; };
 		DF111BC6C15D52475989F39B /* Pods_ZYsmallDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1BA8CEFAD216CD180E0FD0 /* Pods_ZYsmallDay.framework */; };
 /* End PBXBuildFile section */
@@ -175,6 +189,10 @@
 		9514EDB51C33D11B00FD7798 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		9514EDB61C33D11B00FD7798 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		9514EDD51C33D1FE00FD7798 /* RegExCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegExCategories.h; sourceTree = "<group>"; };
+		951ADFA61C4B73CF005795BC /* NavigatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorViewController.swift; sourceTree = "<group>"; };
+		951ADFA81C4B798C005795BC /* String+wnxString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+wnxString.swift"; sourceTree = "<group>"; };
+		951ADFAA1C4BE728005795BC /* ExperHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperHeadView.swift; sourceTree = "<group>"; };
+		951ADFAC1C4BE783005795BC /* ExperienceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceModel.swift; sourceTree = "<group>"; };
 		95206FEA1C340BC90011544F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		952ACEE41C1C593400C9CA11 /* LeadpageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadpageViewController.swift; sourceTree = "<group>"; };
 		952ACEE61C1C5BC800C9CA11 /* fourpage-375w-667h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fourpage-375w-667h@2x.jpg"; sourceTree = "<group>"; };
@@ -235,9 +253,19 @@
 		95D456441C1AFB0B00A732F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D456501C1AFB0B00A732F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAnimatImageView.swift; sourceTree = "<group>"; };
+		95D6E2E21C4E68CB009978B5 /* RegExCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExCategories.m; sourceTree = "<group>"; };
 		95DCB4081C3FB16600D5F77D /* ClassDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassDetailViewController.swift; sourceTree = "<group>"; };
 		95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+wnxImage.swift"; sourceTree = "<group>"; };
 		95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+wxnBarButtonItem.swift"; sourceTree = "<group>"; };
+		95EC15741C4D1B56007DB8F5 /* ExperHeadPushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperHeadPushViewController.swift; sourceTree = "<group>"; };
+		95EC15761C4D1B7A007DB8F5 /* ExperienceWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceWebView.swift; sourceTree = "<group>"; };
+		95EC157A1C4D1BBA007DB8F5 /* ExploreBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBottomView.swift; sourceTree = "<group>"; };
+		95EC157C1C4D1BD3007DB8F5 /* ExploreBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreBottomView.xib; sourceTree = "<group>"; };
+		95EC157E1C4D1C1F007DB8F5 /* ExperienceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
+		95EC157F1C4D1C1F007DB8F5 /* ExperienceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
+		95EC15821C4D1C45007DB8F5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		95EC15831C4D1C45007DB8F5 /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		95EC15861C4D1C61007DB8F5 /* BuyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyDetailViewController.swift; sourceTree = "<group>"; };
 		95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailView.swift; sourceTree = "<group>"; };
 		DA1BA8CEFAD216CD180E0FD0 /* Pods_ZYsmallDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZYsmallDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -290,6 +318,7 @@
 				956664F11C206A3E0083F9B3 /* ClassifyModel.swift */,
 				956664F31C2163CD0083F9B3 /* EveryDayModel.swift */,
 				956665011C219ECC0083F9B3 /* ShareModel.swift */,
+				951ADFAC1C4BE783005795BC /* ExperienceModel.swift */,
 			);
 			path = BusinessModel;
 			sourceTree = "<group>";
@@ -363,7 +392,17 @@
 			isa = PBXGroup;
 			children = (
 				952ACF0E1C1C98E600C9CA11 /* ExperienceViewController.swift */,
+				95EC15741C4D1B56007DB8F5 /* ExperHeadPushViewController.swift */,
+				951ADFAA1C4BE728005795BC /* ExperHeadView.swift */,
 				9507A3311C43984A00E760AF /* DetailViewController.swift */,
+				95EC15761C4D1B7A007DB8F5 /* ExperienceWebView.swift */,
+				95EC157A1C4D1BBA007DB8F5 /* ExploreBottomView.swift */,
+				95EC157C1C4D1BD3007DB8F5 /* ExploreBottomView.xib */,
+				95EC157E1C4D1C1F007DB8F5 /* ExperienceCell.swift */,
+				95EC157F1C4D1C1F007DB8F5 /* ExperienceCell.xib */,
+				95EC15821C4D1C45007DB8F5 /* SignUpViewController.swift */,
+				95EC15831C4D1C45007DB8F5 /* SignUpViewController.xib */,
+				95EC15861C4D1C61007DB8F5 /* BuyDetailViewController.swift */,
 			);
 			path = Experience;
 			sourceTree = "<group>";
@@ -399,7 +438,9 @@
 			children = (
 				95430A7A1C1BE34B00CCFDC8 /* UIColor+wnxColor.swift */,
 				95DCB40C1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift */,
+				951ADFA81C4B798C005795BC /* String+wnxString.swift */,
 				9514EDD51C33D1FE00FD7798 /* RegExCategories.h */,
+				95D6E2E21C4E68CB009978B5 /* RegExCategories.m */,
 				952ACF0C1C1C806E00C9CA11 /* UIView+wnxView.swift */,
 				956664D11C20134E0083F9B3 /* UIImage+wnxImage.swift */,
 				95DCB40A1C3FB68600D5F77D /* UIImageView+wnxImage.swift */,
@@ -421,6 +462,7 @@
 				956664CD1C1D7E1C0083F9B3 /* CityHeadCollectionReusableView.swift */,
 				956664D91C2021120083F9B3 /* LoginViewController.swift */,
 				951374011C3C19C2007610CE /* SDRefreshHeader.swift */,
+				951ADFA61C4B73CF005795BC /* NavigatorViewController.swift */,
 				956664FD1C2172DC0083F9B3 /* ShareView.swift */,
 				956664FF1C21736D0083F9B3 /* ShareView.xib */,
 				95F6E33C1C4500CD0062DB4F /* ShopDetailView.swift */,
@@ -654,6 +696,7 @@
 				952ACF001C1C5BF400C9CA11 /* Nears in Resources */,
 				9514EDC71C33D11B00FD7798 /* UMSocialLocalizable.strings in Resources */,
 				952ACF071C1C63D900C9CA11 /* Images.xcassets in Resources */,
+				95EC157D1C4D1BD3007DB8F5 /* ExploreBottomView.xib in Resources */,
 				952ACEEA1C1C5BC800C9CA11 /* fourpage-375w-667h@2x.jpg in Resources */,
 				951373F61C3C0AF4007610CE /* ShopDetailContentView.xib in Resources */,
 				952ACEFD1C1C5BF400C9CA11 /* events in Resources */,
@@ -661,6 +704,7 @@
 				9514EDCA1C33D11B00FD7798 /* UMSCommentInputController.xib in Resources */,
 				952ACEFE1C1C5BF400C9CA11 /* Experience in Resources */,
 				9514EDCF1C33D11B00FD7798 /* UMSnsAccountViewController.xib in Resources */,
+				95EC15851C4D1C45007DB8F5 /* SignUpViewController.xib in Resources */,
 				951373FE1C3C0B38007610CE /* GuessLikeView.xib in Resources */,
 				951373EC1C3C0A1E007610CE /* ThemeCell.xib in Resources */,
 				956664EA1C2025090083F9B3 /* ShakeViewController.xib in Resources */,
@@ -673,6 +717,7 @@
 				951373E21C3C0998007610CE /* nearCell.xib in Resources */,
 				951373FA1C3C0B14007610CE /* MoreView.xib in Resources */,
 				952ACEEB1C1C5BC800C9CA11 /* fourpage-414w-736h@3x.jpg in Resources */,
+				95EC15811C4D1C1F007DB8F5 /* ExperienceCell.xib in Resources */,
 				9514EDD01C33D11B00FD7798 /* UMSShareListController.xib in Resources */,
 				952ACEFB1C1C5BF400C9CA11 /* Classify in Resources */,
 				952ACEFC1C1C5BF400C9CA11 /* Details in Resources */,
@@ -746,7 +791,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				956664DA1C2021120083F9B3 /* LoginViewController.swift in Sources */,
+				951ADFAD1C4BE783005795BC /* ExperienceModel.swift in Sources */,
 				952ACF131C1C9DAB00C9CA11 /* MeViewController.swift in Sources */,
+				95EC15771C4D1B7A007DB8F5 /* ExperienceWebView.swift in Sources */,
 				956664ED1C20253A0083F9B3 /* AboutWeViewController.swift in Sources */,
 				956664E21C2023FA0083F9B3 /* SettingCell.swift in Sources */,
 				951373E51C3C09E2007610CE /* EventCellTableViewCell.swift in Sources */,
@@ -761,11 +808,13 @@
 				952ACF0D1C1C806E00C9CA11 /* UIView+wnxView.swift in Sources */,
 				95DCB4091C3FB16600D5F77D /* ClassDetailViewController.swift in Sources */,
 				952ACEE51C1C593400C9CA11 /* LeadpageViewController.swift in Sources */,
+				95EC15751C4D1B56007DB8F5 /* ExperHeadPushViewController.swift in Sources */,
 				951373DC1C3C0920007610CE /* NearViewController.swift in Sources */,
 				956664E91C2025090083F9B3 /* ShakeViewController.swift in Sources */,
 				956664F01C20256C0083F9B3 /* RecommendViewController.swift in Sources */,
 				956664CE1C1D7E1C0083F9B3 /* CityHeadCollectionReusableView.swift in Sources */,
 				951373F81C3C0B09007610CE /* MoreView.swift in Sources */,
+				95EC15841C4D1C45007DB8F5 /* SignUpViewController.swift in Sources */,
 				952ACF0F1C1C98E600C9CA11 /* ExperienceViewController.swift in Sources */,
 				95DCB40B1C3FB68600D5F77D /* UIImageView+wnxImage.swift in Sources */,
 				951374021C3C19C2007610CE /* SDRefreshHeader.swift in Sources */,
@@ -775,16 +824,20 @@
 				95DCB40D1C3FC63900D5F77D /* UIBarButtonItem+wxnBarButtonItem.swift in Sources */,
 				950315951C412F10009165F5 /* DetailCell.swift in Sources */,
 				956665021C219ECC0083F9B3 /* ShareModel.swift in Sources */,
+				951ADFAB1C4BE728005795BC /* ExperHeadView.swift in Sources */,
 				950C15EA1C1BCFB4000929F5 /* MainTabBarController.swift in Sources */,
 				956664DD1C20233F0083F9B3 /* OrderViewController.swift in Sources */,
 				9507A3321C43984A00E760AF /* DetailViewController.swift in Sources */,
+				951ADFA71C4B73CF005795BC /* NavigatorViewController.swift in Sources */,
 				951373F21C3C0A98007610CE /* ThemeViewController.swift in Sources */,
 				95430A791C1BDCA000CCFDC8 /* theme.swift in Sources */,
 				956664F61C2164640083F9B3 /* SwiftDictModel.swift in Sources */,
+				95EC15871C4D1C61007DB8F5 /* BuyDetailViewController.swift in Sources */,
 				959AB4421C1D61C30053111F /* DoubleTextView.swift in Sources */,
 				951373DE1C3C0958007610CE /* WNXMapView.swift in Sources */,
 				956664F21C206A3E0083F9B3 /* ClassifyModel.swift in Sources */,
 				952ACF0B1C1C7B4200C9CA11 /* ExploreViewController.swift in Sources */,
+				95D6E2E31C4E68CB009978B5 /* RegExCategories.m in Sources */,
 				951373EE1C3C0A47007610CE /* EventViewController.swift in Sources */,
 				952ACF111C1C9D5000C9CA11 /* ClassifyViewController.swift in Sources */,
 				956664D01C2010480083F9B3 /* IconView.swift in Sources */,
@@ -795,10 +848,13 @@
 				95F6E33D1C4500CD0062DB4F /* ShopDetailView.swift in Sources */,
 				956664E01C2023B30083F9B3 /* SettingViewController.swift in Sources */,
 				951373DA1C3C0312007610CE /* String+Hash.swift in Sources */,
+				95EC15801C4D1C1F007DB8F5 /* ExperienceCell.swift in Sources */,
 				951374001C3C0BE5007610CE /* MainTableView.swift in Sources */,
 				956664D51C2018750083F9B3 /* MyCenterViewController.swift in Sources */,
 				956664D21C20134E0083F9B3 /* UIImage+wnxImage.swift in Sources */,
+				95EC157B1C4D1BBA007DB8F5 /* ExploreBottomView.swift in Sources */,
 				951373E11C3C0998007610CE /* nearCell.swift in Sources */,
+				951ADFA91C4B798C005795BC /* String+wnxString.swift in Sources */,
 				956664CC1C1D7D7F0083F9B3 /* CityCollectionViewCell.swift in Sources */,
 				950C15EE1C1BD351000929F5 /* CityViewController.swift in Sources */,
 			);

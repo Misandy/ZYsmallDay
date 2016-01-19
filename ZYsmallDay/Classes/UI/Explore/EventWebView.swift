@@ -11,7 +11,6 @@ import UIKit
 class EventWebView: UIWebView {
     
     init(rect: CGRect, webViewDelegate: UIWebViewDelegate?, webViewScrollViewDelegate: UIScrollViewDelegate?) {
-        
         super.init(frame: rect)
         
         let topImageShopViewHeight: CGFloat = DetailViewController_TopImageView_Height - 20 + EventViewController_ShopView_Height

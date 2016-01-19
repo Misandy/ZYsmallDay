@@ -3,9 +3,9 @@
 //
 
 #import <CommonCrypto/CommonCrypto.h>
-#import "UMSocial.h"
-#import "UMSocialSinaHandler.h"
-#import "UMSocialWechatHandler.h"
+//#import "UMSocial.h"
+//#import "UMSocialSinaHandler.h"
+//#import "UMSocialWechatHandler.h"
 #import "RegExCategories.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchAPI.h>

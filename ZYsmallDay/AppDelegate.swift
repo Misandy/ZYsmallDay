@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setAppAppearance()
         
+//        setShared()
         
+        setUserMapInfo()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMianViewController", name: SD_ShowMianTabbarController_Notification, object: nil)
 
@@ -35,6 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = showLeadpage()
         
         window?.makeKeyAndVisible()
+    }
+    
+    func setUserMapInfo() {
+        UserInfoManager.sharedUserInfoManager.startUserlocation()
+        MAMapServices.sharedServices().apiKey = theme.GaoDeAPPKey
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // 分享设置
@@ -52,8 +63,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let item = UIBarButtonItem.appearance()
         item.setTitleTextAttributes([NSFontAttributeName : theme.SDNavTitleFont, NSForegroundColorAttributeName : UIColor.blackColor()], forState: .Normal)
-        
     }
+    
+//    func setShared() {
+//        UMSocialData.setAppKey(theme.UMSharedAPPKey)
+//        //        UMSocialSinaHandler.openSSOWithRedirectURL("http://www.jianshu.com/users/5fe7513c7a57/latest_articles")
+//        UMSocialSinaHandler.openSSOWithRedirectURL(nil)
+//        UMSocialWechatHandler.setWXAppId("wx485c6ee1758251bd", appSecret: "468ab73eef432f59a2aa5630e340862f", url: theme.JianShuURL)
+//        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToWechatSession,UMShareToWechatTimeline])
+//    }
+//    
+//    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+//        return UMSocialSnsService.handleOpenURL(url)
+//    }
+//    
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+//        return UMSocialSnsService.handleOpenURL(url)
+//    }
     
     //MARK: 引导页设置
     private func showLeadpage() -> UIViewController {

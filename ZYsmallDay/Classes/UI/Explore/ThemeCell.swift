@@ -13,11 +13,9 @@ class ThemeCell: UITableViewCell {
     var model: ThemeModel? {
     
         didSet {
-        
             titleLable.text = model!.title
             subTitleLable.text = model!.keywords
             backImageView.wxn_setImageWithURL(NSURL(string: model!.img!)!, placeholderImage: UIImage(named: "quesheng")!)
-            
         }
     }
     
@@ -25,6 +23,14 @@ class ThemeCell: UITableViewCell {
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var subTitleLable: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .None
+        self.titleLable.shadowOffset = CGSizeMake(-1, 1)
+        self.titleLable.shadowColor = UIColor.colorWith(20, green: 20, blue: 20, alpha: 0.1)
+        self.subTitleLable.shadowOffset = CGSizeMake(-1, 1)
+        self.subTitleLable.shadowColor = UIColor.colorWith(20, green: 20, blue: 20, alpha: 0.1)
+    }
     
     class func themeCellWithTableView(tableView: UITableView) -> ThemeCell {
         let identifier = "themeCell"

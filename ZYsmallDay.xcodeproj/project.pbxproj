@@ -108,6 +108,7 @@
 		956665021C219ECC0083F9B3 /* ShareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956665011C219ECC0083F9B3 /* ShareModel.swift */; };
 		959AB4421C1D61C30053111F /* DoubleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AB4411C1D61C30053111F /* DoubleTextView.swift */; };
 		959BDED11C3402F600DF668A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 959BDED01C3402F600DF668A /* libsqlite3.tbd */; };
+		959D2E911C4F7AEF000A47BE /* ShareTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D2E901C4F7AEF000A47BE /* ShareTool.swift */; };
 		95D456451C1AFB0B00A732F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D456441C1AFB0B00A732F5 /* AppDelegate.swift */; };
 		95D51B0F1C42373800AB56D6 /* LoadAnimatImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D51B0E1C42373800AB56D6 /* LoadAnimatImageView.swift */; };
 		95D6E2E31C4E68CB009978B5 /* RegExCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D6E2E21C4E68CB009978B5 /* RegExCategories.m */; };
@@ -249,6 +250,7 @@
 		956665011C219ECC0083F9B3 /* ShareModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModel.swift; sourceTree = "<group>"; };
 		959AB4411C1D61C30053111F /* DoubleTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleTextView.swift; sourceTree = "<group>"; };
 		959BDED01C3402F600DF668A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		959D2E901C4F7AEF000A47BE /* ShareTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareTool.swift; sourceTree = "<group>"; };
 		95D456411C1AFB0B00A732F5 /* ZYsmallDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYsmallDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D456441C1AFB0B00A732F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95D456501C1AFB0B00A732F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			children = (
 				956664F51C2164640083F9B3 /* SwiftDictModel.swift */,
 				956664FB1C2172030083F9B3 /* FileTool.swift */,
+				959D2E901C4F7AEF000A47BE /* ShareTool.swift */,
 				9514ED6D1C33C9B000FD7798 /* UserInfoManager.swift */,
 				956664D71C2020AF0083F9B3 /* UserAccountTool.swift */,
 				951373D91C3C0312007610CE /* String+Hash.swift */,
@@ -801,6 +804,7 @@
 				956664F41C2163CD0083F9B3 /* EveryDayModel.swift in Sources */,
 				951373F01C3C0A69007610CE /* EventWebView.swift in Sources */,
 				956664E61C2024C70083F9B3 /* FeedbackViewController.swift in Sources */,
+				959D2E911C4F7AEF000A47BE /* ShareTool.swift in Sources */,
 				951373FC1C3C0B2E007610CE /* GuessLikeView.swift in Sources */,
 				950C15EC1C1BD286000929F5 /* MainViewController.swift in Sources */,
 				9514ED6E1C33C9B000FD7798 /* UserInfoManager.swift in Sources */,

@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/12.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  基类控制器, 带有选择城市的ViewController
 
 import UIKit
 
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
     }
 }
   
-    //MARK: 自定义button，文字在左边，图片在右边
+    //  MARK: 自定义button，文字在左边，图片在右边
     class TextImageButton: UIButton {
         override init(frame: CGRect) {
             super.init(frame: frame)

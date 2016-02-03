@@ -30,6 +30,22 @@ class ExperHeadView: UIView, UIScrollViewDelegate {
         }
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = theme.SDBackgroundColor
+        
+        addSubview(scrollImageView)
+        
+        addSubview(page)
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        scrollImageView.frame = CGRectMake(0, 0, self.width, self.height * 0.8)
+        page.frame = CGRectMake(0, self.height * 0.8, self.width, self.height * 0.2)
+    }
+
     ///MARK:- 懒加载对象
     private lazy var scrollImageView: UIScrollView = {
         let scrollImageView = UIScrollView()
@@ -49,7 +65,24 @@ class ExperHeadView: UIView, UIScrollViewDelegate {
     }()
     
     weak var delegate: ExperHeadViewDelegate?
+    
+    func imageClick(tap: UITapGestureRecognizer) {
+        delegate?.experHeadView(self, didClickImageViewAtIndex: tap.view!.tag - 1000)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
 
+//  MARK:- UIScrollViewDelegate
+extension ExperHeadView {
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let flag = Int(scrollView.contentOffset.x / scrollView.width)
+        page.currentPage = flag
+    }
 }
 
 // MARK:- 协议

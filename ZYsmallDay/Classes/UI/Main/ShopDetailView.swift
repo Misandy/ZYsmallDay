@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 16/1/12.
 //  Copyright © 2016年 章宇. All rights reserved.
-//
+//  店发现，详情view
 
 import UIKit
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExperienceModel: NSObject {
+class ExperienceModel: NSObject, DictModelProtocol {
 
     var head: [ExperienceHeadModel]?
     var list: [EventModel]?

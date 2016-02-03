@@ -8,30 +8,27 @@
 
 import UIKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
+        
         setKeyWindow()
         
         setAppAppearance()
         
-//        setShared()
+        setShared()
         
         setUserMapInfo()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMianViewController", name: SD_ShowMianTabbarController_Notification, object: nil)
-
         
         return true
     }
     
     private func setKeyWindow() {
-    
         window = UIWindow(frame: MainBounds)
         
         window?.rootViewController = showLeadpage()
@@ -48,49 +45,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    // 分享设置
+    //MARK: - 分享设置
     func setAppAppearance() {
-    
         let itemAppearance = UITabBarItem.appearance()
         itemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.blackColor(), NSFontAttributeName : UIFont.systemFontOfSize(12)], forState: .Selected)
-        itemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.blackColor(), NSFontAttributeName : UIFont.systemFontOfSize(12)], forState: .Normal)
+        itemAppearance.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor(), NSFontAttributeName : UIFont.systemFontOfSize(12)], forState: .Normal)
         
-        // 设置导航栏主题
+        //设置导航栏主题
         let navAppearance = UINavigationBar.appearance()
-        // 设置导航titleview字体
+        // 设置导航titleView字体
         navAppearance.translucent = false
         navAppearance.titleTextAttributes = [NSFontAttributeName : theme.SDNavTitleFont, NSForegroundColorAttributeName : UIColor.blackColor()]
         
         let item = UIBarButtonItem.appearance()
-        item.setTitleTextAttributes([NSFontAttributeName : theme.SDNavTitleFont, NSForegroundColorAttributeName : UIColor.blackColor()], forState: .Normal)
+        item.setTitleTextAttributes([NSFontAttributeName : theme.SDNavItemFont, NSForegroundColorAttributeName : UIColor.blackColor()], forState: .Normal)
     }
     
-//    func setShared() {
-//        UMSocialData.setAppKey(theme.UMSharedAPPKey)
-//        //        UMSocialSinaHandler.openSSOWithRedirectURL("http://www.jianshu.com/users/5fe7513c7a57/latest_articles")
-//        UMSocialSinaHandler.openSSOWithRedirectURL(nil)
-//        UMSocialWechatHandler.setWXAppId("wx485c6ee1758251bd", appSecret: "468ab73eef432f59a2aa5630e340862f", url: theme.JianShuURL)
-//        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToWechatSession,UMShareToWechatTimeline])
-//    }
-//    
-//    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-//        return UMSocialSnsService.handleOpenURL(url)
-//    }
-//    
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-//        return UMSocialSnsService.handleOpenURL(url)
-//    }
+    func setShared() {
+        UMSocialData.setAppKey(theme.UMSharedAPPKey)
+        //        UMSocialSinaHandler.openSSOWithRedirectURL("http://www.jianshu.com/users/5fe7513c7a57/latest_articles")
+        UMSocialSinaHandler.openSSOWithRedirectURL(nil)
+        UMSocialWechatHandler.setWXAppId("wx485c6ee1758251bd", appSecret: "468ab73eef432f59a2aa5630e340862f", url: theme.JianShuURL)
+        UMSocialConfig.hiddenNotInstallPlatforms([UMShareToWechatSession,UMShareToWechatTimeline])
+    }
     
-    //MARK: 引导页设置
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        return UMSocialSnsService.handleOpenURL(url)
+    }
+    
+    //MARK: - 引导页设置
     private func showLeadpage() -> UIViewController {
-    
         let versionStr = "CFBundleShortVersionString"
-        let currentVersion = NSBundle.mainBundle().infoDictionary![versionStr] as! String
-        let oldVersion = (NSUserDefaults.standardUserDefaults().objectForKey(versionStr) as? String) ?? "" //判断??左边表达式是否为null，如是null则取右边表达式的值，否则就取左边表达式的值
+        let cureentVersion = NSBundle.mainBundle().infoDictionary![versionStr] as! String
+        let oldVersion = (NSUserDefaults.standardUserDefaults().objectForKey(versionStr) as? String) ?? ""
         
-        if currentVersion.compare(oldVersion) == NSComparisonResult.OrderedDescending {
-        
-            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: versionStr)
+        if cureentVersion.compare(oldVersion) == NSComparisonResult.OrderedDescending {
+            NSUserDefaults.standardUserDefaults().setObject(cureentVersion, forKey: versionStr)
             NSUserDefaults.standardUserDefaults().synchronize()
             return LeadpageViewController()
         }
@@ -104,6 +98,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = mainTabBarVC.viewControllers![0] as? MainNavigationController
         (nav?.viewControllers[0] as! MainViewController).pushcityView()
     }
-
+    
+//    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+//        SDWebImageManager.sharedManager().imageCache.cleanDisk()
+//        SDWebImageManager.sharedManager().cancelAll()
+//    }
 }
 

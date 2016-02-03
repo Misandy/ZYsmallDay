@@ -64,7 +64,7 @@ class DoubleTextView: UIView {
         sender.selected = true
         selectedBtn = sender
         bottomViewScrollTo(sender.tag - 100)
-        
+        delegate?.doubleTextView(self, didClickBtn: sender, forIndex: sender.tag - 100)
     }
     
     func bottomViewScrollTo(index: Int) {

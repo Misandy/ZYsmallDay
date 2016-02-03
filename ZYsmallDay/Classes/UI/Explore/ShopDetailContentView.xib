@@ -112,9 +112,7 @@
                         <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="correctBtn" destination="iN0-l3-epB" eventType="touchUpInside" id="C6N-KC-YGF"/>
-                        <action selector="correctBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="JgZ-lj-GnP"/>
-                        <action selector="correctBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="uD8-Lm-nHB"/>
+                        <action selector="correctBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="cw4-dd-Ds6"/>
                     </connections>
                 </button>
             </subviews>

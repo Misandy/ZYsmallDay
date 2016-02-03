@@ -9,6 +9,21 @@
 import Foundation
 //  string扩展
 extension String {
+    
+    // 判断是否是邮箱
+    func validateEmail() -> Bool {
+        let emailRegex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailTest: NSPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailTest.evaluateWithObject(self)
+    }
+    
+    /// 判断是否是手机号
+    func validateMobile() -> Bool {
+        let phoneRegex: String = "^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(17[0,0-9]))\\d{8}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+        return phoneTest.evaluateWithObject(self)
+    }
+    
     //  将字符串转换成经纬度
     func stringToCLLocationCoordinate2D(separator: String) -> CLLocationCoordinate2D? {
         
@@ -30,10 +45,8 @@ extension NSMutableString {
     class func changeHeigthAndWidthWithSrting(searchStr: NSMutableString) -> NSMutableString {
         var mut = [CGFloat]()
         var mutH = [CGFloat]()
+        
         let imageW = AppWidth - 23
-//        let rxHeight = NSRegularExpression(pattern: "(?<= height=\")\\d*")
-//        let rxWidth = NSRegularExpression(pattern: "(?<=width=\")\\d*")
-//      var rx = NSRegularExpression(pattern:"\d+")
         let rxHeight = NSRegularExpression(pattern: "(?<= height=\")\\d*")
         let rxWidth = NSRegularExpression(pattern: "(?<=width=\")\\d*")
         let widthArray = rxWidth.matches(searchStr as String) as! [String]

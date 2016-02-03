@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/15.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  用户头像的view
 
 import UIKit
 

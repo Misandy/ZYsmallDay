@@ -11,7 +11,6 @@ import UIKit
 public let SD_UserIconData_Path = theme.cachesPath + "/iconImage.data"
 
 enum SDMineCellType: Int {
-
     //个人中心
     case MyCenter = 0
     //我的订单
@@ -19,17 +18,17 @@ enum SDMineCellType: Int {
     //我的收藏
     case MyCollect = 2
     //反馈留言
-     case Feedback = 3
+    case Feedback = 3
     //应用推荐
     case RecommendApp = 4
 }
 
 class MeViewController: MainViewController {
-
+    
     private var loginLabel: UILabel!
     private var tableView: UITableView!
     private lazy var pickVC: UIImagePickerController = {
-    
+        
         let pickVC = UIImagePickerController()
         pickVC.delegate = self
         pickVC.allowsEditing = true
@@ -47,17 +46,17 @@ class MeViewController: MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //初始化导航条上的内容
+        //初始化导航条上的内容
         setNav()
         
-         //设置tableView
-            setTableView()
-        }
+        //设置tableView
+        setTableView()
+    }
     
     private func setNav() {
         navigationItem.title = "我的"
         navigationItem.leftBarButtonItem = nil
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "settinghhhh", highlImageName: "settingh", targer: self, action: "settingClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "settinghhhh", highlImageName: "settingh", targer: self, action: "settingClick")
     }
     
     private func setTableView() {
@@ -97,36 +96,36 @@ class MeViewController: MainViewController {
     }
     
     func settingClick() {
-    
+        
         let settingVC = SettingViewController()
         navigationController?.pushViewController(settingVC, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
         loginLabel.hidden = UserAccountTool.userIsLogin()
         if UserAccountTool.userIsLogin() {
             if let data = NSData(contentsOfFile: SD_UserIconData_Path) {
                 iconView!.iconButton.setImage(UIImage(data: data)!.imageClipOvalImage(), forState: .Normal)
             } else {
-            iconView!.iconButton.setImage(UIImage(named: "my"), forState: .Normal)
+                iconView!.iconButton.setImage(UIImage(named: "my"), forState: .Normal)
             }
         } else {
-        iconView!.iconButton.setImage(UIImage(named: "my"), forState: .Normal)
+            iconView!.iconButton.setImage(UIImage(named: "my"), forState: .Normal)
         }
     }
 }
 
 // MARK: iconViewDelegate
 extension MeViewController: IconViewDelegate {
-
+    
     func iconView(iconView: IconView, didClick iconButton: UIButton) {
         //  判断用户是否登录了
         if UserAccountTool.userIsLogin() {
-        iconActionSheet.showInView(view)
+            iconActionSheet.showInView(view)
         } else {
-        let login = LoginViewController()
+            let login = LoginViewController()
             navigationController?.pushViewController(login, animated: true)
         }
     }
@@ -134,7 +133,7 @@ extension MeViewController: IconViewDelegate {
 
 // MARK: UIActionSheetDelegate
 extension MeViewController: UIActionSheetDelegate {
-
+    
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         print(buttonIndex, terminator: "")
         switch buttonIndex {
@@ -150,12 +149,12 @@ extension MeViewController: UIActionSheetDelegate {
 
 //  摄像机和相册的操作和代理方法
 extension MeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     // 打开照相功能
     private func openCamera() {
-    
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
         
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            
             pickVC.sourceType = .Camera
             self.presentViewController(pickVC, animated: true, completion: nil)
         } else {
@@ -165,7 +164,7 @@ extension MeViewController: UIImagePickerControllerDelegate, UINavigationControl
     
     // 打开相册
     private func openUserPhotoLibrary() {
-    
+        
         pickVC.sourceType = .PhotoLibrary
         pickVC.allowsEditing = true
         presentViewController(pickVC, animated: true, completion: nil)
@@ -174,32 +173,32 @@ extension MeViewController: UIImagePickerControllerDelegate, UINavigationControl
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         // 对用户选着的图片进行质量压缩，上传服务器，本地持久化存储
         if let typeStr = info[UIImagePickerControllerMediaType] as? String {
-        
-            if typeStr == "public.image" {
             
-                if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            if typeStr == "public.image" {
                 
+                if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+                    
                     var data: NSData?
                     let smallImage = UIImage.imageClipToNewImage(image, newSize: iconView!.iconButton.size)
                     if UIImagePNGRepresentation(smallImage) == nil {
-                    data = UIImageJPEGRepresentation(smallImage, 0.8)
+                        data = UIImageJPEGRepresentation(smallImage, 0.8)
                     } else {
-                    data = UIImagePNGRepresentation(smallImage)
+                        data = UIImagePNGRepresentation(smallImage)
                     }
                     
                     if data != nil {
                         do {
-                        // 将头像的data传入服务器
+                            // 将头像的data传入服务器
                             //本地也保留一份data数据
                             try NSFileManager.defaultManager().createDirectoryAtPath(theme.cachesPath, withIntermediateDirectories: true, attributes: nil)
                         } catch _ {
                             
                         }
-                           NSFileManager.defaultManager().createFileAtPath(SD_UserIconData_Path, contents: data, attributes: nil)
+                        NSFileManager.defaultManager().createFileAtPath(SD_UserIconData_Path, contents: data, attributes: nil)
                         
                         iconView!.iconButton.setImage(UIImage(data: NSData(contentsOfFile: SD_UserIconData_Path)!)!.imageClipOvalImage(), forState: .Normal)
                     } else {
-                     SVProgressHUD.showErrorWithStatus("照片保存失败", maskType: SVProgressHUDMaskType.Black)
+                        SVProgressHUD.showErrorWithStatus("照片保存失败", maskType: SVProgressHUDMaskType.Black)
                     }
                 }
             }

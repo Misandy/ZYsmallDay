@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/15.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  关于我们
 
 import UIKit
 
@@ -23,7 +23,5 @@ class AboutWeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "关于我们"
-
-
     }
 }

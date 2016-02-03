@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/15.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  设置控制器
 
 import UIKit
 
@@ -57,19 +57,17 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = titles[indexPath.row] as? String
         
         if indexPath.row == SettingCellType.Clean.hashValue {
-//            cell.bottomView.hidden = true
+            cell.bottomView.hidden = true
             cell.sizeLabel.hidden = false
-//            cell.sizeLabel.text =  String().stringByAppendingFormat("%.2f M", FileTool.folderSize(theme.cachesPath))
-            
+            cell.sizeLabel.text =  String().stringByAppendingFormat("%.2f M", FileTool.folderSize(theme.cachesPath))
             
         } else {
-//            cell.bottomView.hidden = false
+            cell.bottomView.hidden = false
             cell.sizeLabel.hidden = true
         }
         
         return cell
     }
-    
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/12.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  基类导航控制器
 
 import UIKit
 
@@ -18,7 +18,7 @@ class MainNavigationController: UINavigationController {
     
     lazy var backBtn: UIButton = {
     
-        //设置返回按钮属性
+        //  设置返回按钮属性
         let backBtn = UIButton(type: UIButtonType.Custom)
         backBtn.titleLabel?.font = UIFont.systemFontOfSize(17)
         backBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)

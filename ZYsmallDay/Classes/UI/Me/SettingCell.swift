@@ -20,6 +20,7 @@ enum SettingCellType: Int {
 class SettingCell: UITableViewCell {
     
     
+    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageImageView: UIImageView!
@@ -27,13 +28,13 @@ class SettingCell: UITableViewCell {
     override func awakeFromNib() {
     
         super.awakeFromNib()
-//        bottomView.alpha = 0.3
+        bottomView.alpha = 0.3
         sizeLabel.hidden = true
         selectionStyle = .None
     }
     
     class func settingCellWithTableView(tableView: UITableView) -> SettingCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SettingCell") as! SettingCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("settingCell") as! SettingCell
         return cell
     }
 }

@@ -4,7 +4,7 @@
 //
 //  Created by 章宇 on 15/12/13.
 //  Copyright © 2015年 章宇. All rights reserved.
-//
+//  选择城市cell
 
 import UIKit
 
@@ -32,7 +32,7 @@ class CityCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    /// 重新布局子控件
+    // 重新布局子控件
     override func layoutSubviews() {
         super.layoutSubviews()
         textLabel.frame = self.bounds

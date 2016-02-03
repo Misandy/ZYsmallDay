@@ -27,7 +27,7 @@ class NavigatorViewController: UIViewController {
     private lazy var mapView: MAMapView = {
         let mapView = MAMapView()
         mapView.frame = MainBounds
-//        mapView.delegate = self
+        mapView.delegate = self
         mapView.showsCompass = false
         mapView.showsScale = false
         mapView.showsUserLocation = true
@@ -39,5 +39,25 @@ class NavigatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
 
+extension NavigatorViewController: MAMapViewDelegate {
+    
+    func mapView(mapView: MAMapView!, viewForAnnotation annotation: MAAnnotation!) -> MAAnnotationView! {
+        if annotation.isKindOfClass(MAPointAnnotation.self) {
+            var annot = mapView.dequeueReusableAnnotationViewWithIdentifier("point") as? CustomAnnotationView
+            if annot == nil {
+                annot = CustomAnnotationView(annotation: annotation, reuseIdentifier: "point") as CustomAnnotationView
+            }
+            annot!.userInteractionEnabled = false
+            annot!.setSelected(true, animated: true)
+            annot!.canShowCallout = false
+            annot!.image = UIImage(named: "zuobiao1")
+            annot!.center = CGPoint(x: 0, y: -(annot!.image.size.height * 0.5))
+            annot!.calloutView?.adressTitle = model?.address
+            return annot!
+        }
+        
+        return nil
+    }
 }

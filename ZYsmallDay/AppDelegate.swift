@@ -99,9 +99,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         (nav?.viewControllers[0] as! MainViewController).pushcityView()
     }
     
-//    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+    func applicationDidReceiveMemoryWarning(application: UIApplication) {
 //        SDWebImageManager.sharedManager().imageCache.cleanDisk()
 //        SDWebImageManager.sharedManager().cancelAll()
-//    }
+    }
 }
 

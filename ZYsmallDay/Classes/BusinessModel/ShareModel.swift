@@ -22,7 +22,7 @@ class ShareModel: NSObject {
                 if text.length > 50 {
                 
                     let aa = text.substringToIndex(50)
-                    self.shareDetail == aa as String
+                    self.shareDetail = aa as String
                 } else {
                 
                     self.shareDetail = shareDetail

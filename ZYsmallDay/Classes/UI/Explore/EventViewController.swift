@@ -96,6 +96,7 @@ class EventViewController: UIViewController {
                 topImageView.wxn_setImageWithURL(NSURL(string: imageStr)!, placeholderImage: UIImage(named: "quesheng")!)
             }
             self.shareView.shareModel = ShareModel(shareTitle: model?.title, shareURL: model?.shareURL, image: nil, shareDetail: model?.detail)
+            
             var htmlSrt = model?.mobileURL
             
             if htmlSrt != nil {
